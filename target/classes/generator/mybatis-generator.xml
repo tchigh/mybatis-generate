@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!--加载配置文件，为下面读取数据库信息准�?-->
+    <properties resource="config/application.properties"/>
+    <!--加载配置文件，为下面读取数据库信息准�?-->
+    <context id="Mysql" targetRuntime="MyBatis3Simple" >
+
+        <!-- 生成swagger注解-->
+        <plugin type="com.mydemo.generator.plugins.GeneratorSwagger2Doc">
+            <property name="apiModelAnnotationPackage" value="io.swagger.annotations.ApiModel"/>
+            <property name="apiModelPropertyAnnotationPackage" value="io.swagger.annotations.ApiModelProperty"/>
+        </plugin>
+
+        <!--生成set返回，方便链式调�?-->
+        <plugin type="com.mydemo.generator.plugins.ExtendEntitySetter"/>
+
+
+        <!-- 阻止生成自动注释 -->
+        <commentGenerator>
+            <property name="javaFileEncoding" value="gbk"/>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--数据库链接地�?账号密码-->
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.username}"
+                        password="${spring.datasource.password}">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--生成Model类存放位�?-->
+        <javaModelGenerator targetPackage="${javaModelGenerator.targetPackage}" targetProject="${javaModelGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--生成映射文件存放位置-->
+        <sqlMapGenerator targetPackage="${sqlMapGenerator.targetPackage}" targetProject="${sqlMapGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--生成Dao类存放位�?-->
+        <!-- 客户端代码，生成易于使用的针对Model对象和XML配置文件 的代�?
+                type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+                type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        -->
+       <javaClientGenerator type="XMLMAPPER" targetPackage="${javaClientGenerator.targetPackage}" targetProject="${javaClientGenerator.targetProject}">
+            <property name="enableSubPackages" value="true"/>
+       </javaClientGenerator>
+
+        <!--生成对应表及类名
+        去掉Mybatis Generator生成的一�? example
+        -->
+
+        <!--根据通配符批量生成实�?,请勿更改此处内容-->
+     <!--  <table tableName="sg%">
+            <domainObjectRenamingRule searchString="^Sg" replaceString=""/>
+        </table>-->
+
+         <table tableName="cim_enterprise_basic_info" domainObjectName="CimEnterpriseBasicInfo"></table>
+
+    </context>
+</generatorConfiguration>

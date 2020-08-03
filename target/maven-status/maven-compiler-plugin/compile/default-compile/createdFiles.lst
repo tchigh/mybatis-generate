@@ -1,0 +1,5 @@
+com\mydemo\base\entity\CimEnterpriseBasicInfo.class
+com\mydemo\base\entity\CimEnterpriseBasicInfo$CimEnterpriseBasicInfoBuilder.class
+com\mydemo\base\dao\CimEnterpriseBasicInfoMapper.class
+com\mydemo\generator\plugins\GeneratorSwagger2Doc.class
+com\mydemo\generator\plugins\ExtendEntitySetter.class
