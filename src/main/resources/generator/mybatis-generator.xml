@@ -64,7 +64,10 @@
             <domainObjectRenamingRule searchString="^Sg" replaceString=""/>
         </table>-->
 
-         <table tableName="cim_enterprise_basic_info" domainObjectName="CimEnterpriseBasicInfo"></table>
+        <table tableName="lease_registration" domainObjectName="LeaseRegistration" enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
+
 
     </context>
 </generatorConfiguration>

@@ -15,11 +15,18 @@
     <maven.compiler.target>1.7</maven.compiler.target>
   </properties>
   <dependencies>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>2.1.10.RELEASE</version>
+    </dependency>
+
     <!--通用mapper -->
     <dependency>
       <groupId>tk.mybatis</groupId>
       <artifactId>mapper-spring-boot-starter</artifactId>
-      <version>2.0.1</version>
+      <version>2.0.3</version>
     </dependency>
     <!--mysql连接驱动 -->
     <dependency>
@@ -51,6 +58,44 @@
       <artifactId>springfox-swagger-ui</artifactId>
       <version>2.9.2</version>
     </dependency>
+    <dependency>
+      <groupId>com.diboot</groupId>
+      <artifactId>diboot-devtools-spring-boot-starter</artifactId>
+      <version>2.0.3-RC2</version>
+      <scope>provide</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-aop</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>com.diboot</groupId>
+      <artifactId>diboot-core-spring-boot-starter</artifactId>
+      <version>2.0.3-RC2</version>
+    </dependency>
+
+    <!-- mybatis-plus-->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <version>2.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.baomidou</groupId>
+          <artifactId>mybatis-plus-generator</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- 代码生成器默认使用如下模版引擎 -->
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity-engine-core</artifactId>
+      <version>2.2</version>
+    </dependency>
+
 
   </dependencies>
 
