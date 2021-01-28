@@ -19,7 +19,7 @@ import java.util.List;
 public class ExtendEntitySetter extends PluginAdapter {
     private static final Logger logger = LoggerFactory.getLogger(ExtendEntitySetter.class);
 
-    private String aa = "dd";
+    private String aa = "dd1";
 
     @Override
     public boolean validate(List<String> list) {
