@@ -1,20 +1,18 @@
 package com.mydemo.PlusGen;
 
 import com.baomidou.mybatisplus.enums.IdType;
-import com.baomidou.mybatisplus.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.InjectionConfig;
-import com.baomidou.mybatisplus.generator.config.*;
+import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
+import com.baomidou.mybatisplus.generator.config.GlobalConfig;
+import com.baomidou.mybatisplus.generator.config.PackageConfig;
+import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.DbType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
-import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-import org.apache.commons.lang3.StringUtils;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class MpG {
+
+    private static final String PACKAGE_NAME = "com.cun.plus";
+
     public static void main(String[] args) {
         //1. 全局配置
         GlobalConfig config = new GlobalConfig();
@@ -47,7 +45,7 @@ public class MpG {
 
         //4. 包名策略配置
         PackageConfig pkConfig = new PackageConfig();
-        pkConfig.setParent("com.cun.plus")
+        pkConfig.setParent(PACKAGE_NAME)
                 .setMapper("mapper")
                 .setService("service")
                 .setController("controller")
