@@ -13,6 +13,8 @@ public class MpG {
 
     private static final String PACKAGE_NAME = "com.cun.plus";
 
+    int t = 10;
+
     public static void main(String[] args) {
         //1. »´æ÷≈‰÷√
         GlobalConfig config = new GlobalConfig();
