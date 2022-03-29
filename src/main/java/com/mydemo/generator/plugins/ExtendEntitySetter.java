@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Setter扩展
- * @author: wangms
+ * @author: zpy
  * @date: 2019-09-03 14:52
  */
 public class ExtendEntitySetter extends PluginAdapter {
