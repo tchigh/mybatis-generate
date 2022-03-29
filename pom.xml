@@ -139,12 +139,7 @@
             <artifactId>my-generator</artifactId>
             <version>1.0.0</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/lib/my-generator-1.0.0.jar</systemPath>
-          </dependency>
-          <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-generator</artifactId>
-            <version>1.0.0</version>
+            <systemPath>${project.basedir}/target/my-generator-1.0.0.jar</systemPath>
           </dependency>
         </dependencies>
         <configuration>

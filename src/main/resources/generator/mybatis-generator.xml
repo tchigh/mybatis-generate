@@ -64,7 +64,7 @@
             <domainObjectRenamingRule searchString="^Sg" replaceString=""/>
         </table>-->
 
-        <table tableName="lease_registration" domainObjectName="LeaseRegistration" enableCountByExample="false"
+        <table tableName="user" domainObjectName="User" enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"/>
 
